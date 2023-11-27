@@ -16,7 +16,7 @@ light:
     id: RGBLed
 ```
 
-### Set RGB to green if connected to Wifi
+### Set RGB to RED if not connected to wifi, green when connected to Wifi
 ```
 interval:
   - interval: 1s
@@ -25,7 +25,16 @@ interval:
         condition:
           wifi.connected:
         then:
-          - light.turn_on: RGBLed
+          - light.turn_on: 
+              id: RGBLed
+              red: 0%
+              green: 100%
+              blue: 0%
         else:
-          - light.turn_off: RGBLed
+          - light.turn_on: 
+              id: RGBLed
+              red: 100%
+              green: 0%
+              blue: 0%
+
 ```
