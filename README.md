@@ -2,7 +2,7 @@
 Information about the Wemos C3 Pico.  These are just my notes for getting the Pico working with ESPHome and HomeAssistant. There is a significant lack of documentation available for these new devices, so I am posting this publically hopefully to make your configuration easier. 
 
 
-## RGB LED: Connected to Pin 7
+## Onboard RGB LED: Connected to Pin 7
 
 ### Example configuration entry for ESPHome
 ```
