@@ -5,6 +5,7 @@ Information about the Wemos C3 Pico
 ## RGB LED: Connected to Pin 7
 
 ### Example configuration entry for ESPHome
+```
 light:
   - platform: neopixelbus
     type: RGB
@@ -13,8 +14,10 @@ light:
     num_leds: 1
     name: "RGBLed"
     id: RGBLed
+```
 
 ### Set RGB to green if connected to Wifi
+```
 interval:
   - interval: 1s
     then:
@@ -25,3 +28,4 @@ interval:
           - light.turn_on: RGBLed
         else:
           - light.turn_off: RGBLed
+```
