@@ -27,7 +27,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Esp32-C3-2 Fallback Hotspot"
+    ssid: "ESP32-C3 Fallback Hotspot"
     password: "XXXXXXXXXXXXXXX"
 
   on_connect:
