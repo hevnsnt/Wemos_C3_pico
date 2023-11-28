@@ -21,23 +21,29 @@ light:
 
 ### Set RGB to RED if not connected to wifi, green when connected to Wifi
 ```
-interval:
-  - interval: 1s
-    then:
-      if:
-        condition:
-          wifi.connected:
-        then:
-          - light.turn_on: 
-              id: RGBLed
-              red: 0%
-              green: 100%
-              blue: 0%
-        else:
-          - light.turn_on: 
-              id: RGBLed
-              red: 100%
-              green: 0%
-              blue: 0%
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp32-C3-2 Fallback Hotspot"
+    password: "XXXXXXXXXXXXXXX"
+
+  on_connect:
+    - light.turn_on: 
+        id: RGBLed
+        red: 0%
+        green: 100%
+        blue: 0%
+    - delay: 3s
+    - light.turn_off:
+        id: RGBLed
+  on_disconnect:
+    - light.turn_on: 
+        id: RGBLed
+        red: 100%
+        green: 0%
+        blue: 0%
 
 ```
