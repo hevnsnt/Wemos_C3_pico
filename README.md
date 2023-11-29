@@ -4,6 +4,7 @@ Information about the Wemos C3 Pico.  These are just my notes for getting the Pi
 ![WEMOS PICO ESP32-C3 Pinout](/images/c3_pico_v1.png)
 ![WEMOS PICO ESP32-C3 Back](/images/c3_pico_v1_back.png)
 
+https://mischianti.org/wemos-lolin-esp32-c3-pico-high-resolution-pinout-and-specs/
 
 ## Onboard RGB LED: Connected to Pin 7
 
